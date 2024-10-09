@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unreleased Music</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div id="paywall" class="paywall">
+        <h1>Access Unreleased Music</h1>
+        <p>Subscribe for $1.00 a day to enjoy unlimited access!</p>
+        <form id="payment-form">
+            <table class="payment-table">
+                <tr>
+                    <td>
+                        <div id="card-element"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="submit-button">Pay $1.00</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="payment-result"></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="music-player" class="music-player" style="display: none;">
+        <audio id="audio" controls></audio>
+        <div class="controls">
+            <button id="play-button">Play</button>
+            <button id="next-button">Next</button>
+            <button id="favorite-button">Favorite</button>
+        </div>
+        <div id="favorites"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
